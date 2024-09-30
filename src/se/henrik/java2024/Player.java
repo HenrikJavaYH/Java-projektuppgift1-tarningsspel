@@ -3,18 +3,20 @@ package se.henrik.java2024;
 public class Player {
     String name;
     int score;
-    int roll1;
-    int roll2;
+    int[] rolls;
 
-    public Player(String name) {
+    public Player(String name, int nbrOfRolls) {
         this.name = name;
+        this.rolls = new int[nbrOfRolls];
     }
     String getName() {
         return name;
     }
     int CalculateScore() {
-        score = roll1 + roll2;
-        return score;
+        for(int roll: rolls){
+            score = score + roll;
+        }
 
+        return score;
     }
 }
