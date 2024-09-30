@@ -26,6 +26,7 @@ public class Tarningsspel {
         else {
             System.out.println("Tärningen ramlade nedför bordet, du får 0 poäng på detta kast");
         }
+        
         System.out.println("Kasta tärningen igen " + p1.getName());
         int roll2 = rand.nextInt(6) + 1;
         p1.roll2 = roll2;
